@@ -32,3 +32,11 @@ jobs:
 
     - name: Junit Coverage Report
       uses: xportation/junit-coverage-report@v1.0.2
+    - name: Run tests and generate reports
+      run: mvn test
+
+    - name: Archive Test Reports
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: target/surefire-reports
