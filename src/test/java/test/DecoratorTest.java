@@ -15,7 +15,7 @@ public class DecoratorTest {
     LinkedList<Client> clients = new LinkedList<>();
     Bank bcr = new Bank(clients, "BCR");
     @Test
-    void addLifeInsurance() throws Exception {
+    public void addLifeInsurance() throws Exception {
         String s1 = "Account RON [Account: code=insurance1, amount=100.0]";
         String s2 = "Account RON [Account: code=insurance1, amount=100.0]\n\tThis account has insurance.";
         Account lifeAcc = RONFactory.createRONAccount("insurance1", 100);
@@ -26,7 +26,7 @@ public class DecoratorTest {
     }
 
     @Test
-    void addEconomy() throws Exception {
+    public void addEconomy() throws Exception {
         String s1 = "Account EUR [Account: code=economy1, amount=100.0]";
         String s2 = "Account EUR [Account: code=economy1, amount=100.0]\n\tThis is an economy account.";
         Account econAcc = EURFactory.createEURAccount("economy1", 100);
@@ -36,7 +36,7 @@ public class DecoratorTest {
         assertEquals(econAcc.toString(), s2);
     }
     @Test
-    void addChildAccount() throws Exception {
+    public void addChildAccount() throws Exception {
         String s1 = "Account EUR [Account: code=child1, amount=100.0]";
         String s2 = "Account EUR [Account: code=child1, amount=100.0]\n\tThis is an economy account.";
         Account childAcc = EURFactory.createEURAccount("child1", 100);
@@ -46,7 +46,7 @@ public class DecoratorTest {
         assertEquals(childAcc.toString(), s2);
     }
     @Test
-    void multipleDecorators() throws Exception {
+    public void multipleDecorators() throws Exception {
         String s1 = "Account EUR [Account: code=both1, amount=100.0]";
         String s2 = "Account EUR [Account: code=both1, amount=100.0]\n\tThis is an economy account.\n\tThis account has insurance.";
         Account bothAcc = EURFactory.createEURAccount("both1", 100);

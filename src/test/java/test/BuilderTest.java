@@ -42,7 +42,7 @@ public class BuilderTest {
         assertEquals(placeOfBirth, client.getPlaceOfBirth());
     }
     @Test
-    void testAddEURAccount() throws Exception {
+    public void testAddEURAccount() throws Exception {
 
         Client.ClientBuilder builder1 = new Client.ClientBuilder("Ionescu")
                 .age(30)
@@ -57,7 +57,7 @@ public class BuilderTest {
     }
 
     @Test
-    void testAddRONAccount() throws Exception {
+    public void testAddRONAccount() throws Exception {
         Client.ClientBuilder client2 = new Client.ClientBuilder("John Doe")
                 .age(30)
                 .address("123 Main St")
@@ -76,7 +76,7 @@ public class BuilderTest {
     }
 
     @Test
-    void testCloseNonExistingAccount() throws Exception {
+    public void testCloseNonExistingAccount() throws Exception {
         Client client = new Client.ClientBuilder("John Doe")
                 .age(30)
                 .address("123 Main St")

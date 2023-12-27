@@ -14,7 +14,7 @@ public class CommandTest {
     LinkedList<Client> clients = new LinkedList<>();
     Bank bcr = new Bank(clients, "BCR");
     @Test
-    void blockAccountTest() throws Exception {
+    public void blockAccountTest() throws Exception {
         ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount("commandAcc1", 100);
         assertNotNull(commandAcc);
@@ -32,7 +32,7 @@ public class CommandTest {
     }
 
     @Test
-    void retrieveDeposeTest() throws Exception {
+    public void retrieveDeposeTest() throws Exception {
         ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount( "commandAcc2", 100);
         Operations o1 = new ro.uvt.dp.AccountPack.Commander.depose(commandAcc, 30);
@@ -51,7 +51,7 @@ public class CommandTest {
         assertEquals(commandAcc.getTotalAmount(), 144.2);
     }
     @Test
-    void testUndoRedoWithDifferentSequences() throws Exception {
+    public void testUndoRedoWithDifferentSequences() throws Exception {
         ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount("commandAcc3", 100);
 
