@@ -1,5 +1,6 @@
 package ro.uvt.dp.AccountPack;
 
+import ro.uvt.dp.AccountPack.AbstractAccountMediator;
 import ro.uvt.dp.AccountPack.Account;
 import ro.uvt.dp.Client.Client;
 

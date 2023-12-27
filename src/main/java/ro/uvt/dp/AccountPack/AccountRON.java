@@ -1,9 +1,13 @@
 package ro.uvt.dp.AccountPack;
 
+import ro.uvt.dp.AccountPack.AbstractFactory;
+import ro.uvt.dp.AccountPack.Account;
+import ro.uvt.dp.AccountPack.AccountEUR;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountRON extends Account implements Transfer {
+public class AccountRON extends Account implements ro.uvt.dp.AccountPack.Transfer {
 	private static final Map<String, AccountRON> accountMap = new HashMap<>();
 	public AccountRON(String accountNumber, double sum) throws Exception {
 		super(accountNumber, sum);

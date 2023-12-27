@@ -1,7 +1,7 @@
 package ro.uvt.dp.AccountPack;
 //unused imports
 
-public abstract class Account implements Operations {
+public abstract class Account implements ro.uvt.dp.AccountPack.Operations {
 
 	protected String accountCode = null;
 	protected boolean blockedFlag = false;

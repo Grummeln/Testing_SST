@@ -1,4 +1,4 @@
-package ro.uvt.dp.test;
+package test;
 import ro.uvt.dp.AccountPack.*;
 import ro.uvt.dp.AccountPack.Commander.*;
 
@@ -17,11 +17,11 @@ class CommandTests {
     Bank bcr = new Bank(clients, "BCR");
     @Test
     void blockAccountTest() throws Exception {
-        Manager om = new Manager();
+        ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount("commandAcc1", 100);
         assertNotNull(commandAcc);
-        Operations o1 = new block_account(commandAcc);
-        Operations o2 = new unblock_account(commandAcc);
+        Operations o1 = new ro.uvt.dp.AccountPack.Commander.block_account(commandAcc);
+        Operations o2 = new ro.uvt.dp.AccountPack.Commander.unblock_account(commandAcc);
         assertFalse(commandAcc.is_account_blocked());
         om.executeOp(o1);
         assertTrue(commandAcc.is_account_blocked());
@@ -35,10 +35,10 @@ class CommandTests {
 
     @Test
     void retrieveDeposeTest() throws Exception {
-        Manager om = new Manager();
+        ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount( "commandAcc2", 100);
-        Operations o1 = new depose(commandAcc, 30);
-        Operations o2 = new retrieve(commandAcc, 20);
+        Operations o1 = new ro.uvt.dp.AccountPack.Commander.depose(commandAcc, 30);
+        Operations o2 = new ro.uvt.dp.AccountPack.Commander.retrieve(commandAcc, 20);
         assertNotNull(commandAcc);
         assertEquals(commandAcc.getTotalAmount(), 103);
         om.executeOp(o1);
@@ -54,11 +54,11 @@ class CommandTests {
     }
     @Test
     void testUndoRedoWithDifferentSequences() throws Exception {
-        Manager om = new Manager();
+        ro.uvt.dp.AccountPack.Commander.Manager om = new ro.uvt.dp.AccountPack.Commander.Manager();
         Account commandAcc = RONFactory.createRONAccount("commandAcc3", 100);
 
-        Operations o1 = new depose(commandAcc, 30);
-        Operations o2 = new retrieve(commandAcc, 20);
+        Operations o1 = new ro.uvt.dp.AccountPack.Commander.depose(commandAcc, 30);
+        Operations o2 = new ro.uvt.dp.AccountPack.Commander.retrieve(commandAcc, 20);
 
         assertNotNull(commandAcc);
 

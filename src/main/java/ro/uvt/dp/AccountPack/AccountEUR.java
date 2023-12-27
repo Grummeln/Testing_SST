@@ -1,9 +1,12 @@
 package ro.uvt.dp.AccountPack;
 
+import ro.uvt.dp.AccountPack.AbstractFactory;
+import ro.uvt.dp.AccountPack.Account;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountEUR extends Account implements Transfer {
+public class AccountEUR extends Account implements ro.uvt.dp.AccountPack.Transfer {
 	private static final Map<String, AccountEUR> accountMap = new HashMap<>();
 	public static AccountEUR getInstance(String accountNumber, double sum) throws Exception {
 		if (accountMap.containsKey(accountNumber)) {
@@ -55,7 +58,7 @@ public class AccountEUR extends Account implements Transfer {
 
 		@Override
 		public Account createRONAccount(String accountNumber, double sum) throws Exception {
-			return new AccountRON(accountNumber, sum);
+			return new ro.uvt.dp.AccountPack.AccountRON(accountNumber, sum);
 		}
 	}
 
