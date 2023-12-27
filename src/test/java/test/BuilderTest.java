@@ -7,12 +7,11 @@ import ro.uvt.dp.Client.Client;
 import ro.uvt.dp.AccountPack.AbstractFactory;
 import ro.uvt.dp.AccountPack.AccountEUR;
 import ro.uvt.dp.AccountPack.AccountRON;
-
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Date;
 import java.util.LinkedList;
 
-import static org.junit.jupiter.api.Assertions.*;
 public class BuilderTest {
     LinkedList<Client> clients = new LinkedList<>();
     Bank bcr = new Bank(clients, "Banca BCR");

@@ -5,8 +5,7 @@ import ro.uvt.dp.AccountPack.Account;
 import ro.uvt.dp.AccountPack.AbstractFactory;
 import ro.uvt.dp.AccountPack.AccountEUR;
 import ro.uvt.dp.AccountPack.AccountRON;
-
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FactoryTest {

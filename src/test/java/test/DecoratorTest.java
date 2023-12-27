@@ -4,10 +4,10 @@ import ro.uvt.dp.AccountPack.*;
 import org.junit.jupiter.api.Test;
 import ro.uvt.dp.BankPack.Bank;
 import ro.uvt.dp.Client.Client;
-
+import java.util.LinkedList;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class DecoratorTest {
     AbstractFactory EURFactory = new AccountEUR.EURFactory();
