@@ -34,3 +34,5 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Junit Coverage Report
       uses: xportation/junit-coverage-report@v1.0.2
+    - name: Junit Test Dashboard
+      uses: janisz/action@v2
