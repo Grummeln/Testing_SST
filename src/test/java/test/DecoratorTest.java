@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DecoratorTests {
+public class DecoratorTest {
     AbstractFactory EURFactory = new AccountEUR.EURFactory();
     AbstractFactory RONFactory = new AccountRON.RONFactory();
     LinkedList<Client> clients = new LinkedList<>();
