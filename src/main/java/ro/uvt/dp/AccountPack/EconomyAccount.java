@@ -15,7 +15,7 @@ public class EconomyAccount extends AccountDecorator {
 
     @Override
     public String toString(){
-        return acc.toString() + "\n\tThis is an economy account.";
+        return acc.toString() + " This is an economy account.";
     }
 
     @Override
@@ -37,4 +37,5 @@ public class EconomyAccount extends AccountDecorator {
     public double getInterest() {
         return 0;
     }
+
 }

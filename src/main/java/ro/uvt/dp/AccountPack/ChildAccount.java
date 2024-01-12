@@ -15,7 +15,7 @@ public class ChildAccount extends AccountDecorator {
 
     @Override
     public String toString(){
-        return acc.toString() + "\n\tThis account is a child's account.";
+        return acc.toString() + " This account is a child's account.";
     }
 
     @Override
@@ -37,4 +37,5 @@ public class ChildAccount extends AccountDecorator {
     public double getInterest() {
         return 0;
     }
+
 }

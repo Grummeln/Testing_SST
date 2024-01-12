@@ -15,7 +15,7 @@ public class LifeInsurance extends AccountDecorator {
 
     @Override
     public String toString(){
-        return acc.toString() + "\n\tThis account has insurance.";
+        return acc.toString() + " This account has insurance.";
     }
 
     @Override

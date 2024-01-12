@@ -48,12 +48,11 @@ public class BuilderTest {
                 .age(30)
                 .phoneNumber(1234)
                 .address("Susan street")
-                .abstractFactory(RONFactory)
                 .abstractFactory(EURFactory);
         Client cl1 = builder1.build();
-        cl1.addAccount(Account.TYPE.RON, "RON1234", 400);
+        cl1.addAccount(Account.TYPE.EUR, "EUR1234", 400);
         bcr.addClient(cl1);
-        assertNotNull(builder1.accountNumber("RON1234"));
+        assertNotNull(builder1.accountNumber("EUR1234"));
     }
 
     @Test
@@ -64,11 +63,11 @@ public class BuilderTest {
                 .phoneNumber(1234567890)
                 .dateOfBirth(new Date())
                 .placeOfBirth("City")
-                .type(Account.TYPE.EUR)
+                .type(Account.TYPE.RON)
                 .accountNumber("RON0001")
                 .abstractFactory(RONFactory);
         Client cl2 = client2.build();
-        cl2.addAccount(Account.TYPE.RON, "RON0001", 400);
+        cl2.addAccount(Account.TYPE.RON, "RON00001", 400);
         bcr.addClient(cl2);
 
         cl2.addAccount(Account.TYPE.RON, "RON0002", 1500);
