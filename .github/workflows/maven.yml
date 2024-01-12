@@ -39,9 +39,8 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Install Cucumber
-      run: npm install -g cucumber
-
-    - name: Run Gherkin Tests
-      run: npx cucumber
-
+    - name: Gherkin Linter
+      uses: restqa/gherkin-linter-action@0.0.1
+      with:
+       path: src/test/java/test/OverallGherkinTests.feature
+          
