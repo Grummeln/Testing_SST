@@ -40,3 +40,16 @@ jobs:
       with:
         name: test-reports
         path: target/surefire-reports
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install Cucumber
+      run: npm install -g cucumber
+
+    - name: Run Gherkin Tests
+      run: cucumber
+    - name: Cucumber Report to Annotations
+      uses: deblockt/cucumber-report-annotations-action@v1.1
